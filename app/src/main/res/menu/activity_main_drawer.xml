@@ -13,24 +13,25 @@
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Memory" />
+            android:title="Photos / Video" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_assistant"
+            android:title="Map" />
+        <item
+            android:id="@id/nav_view"
+            android:title="Currency" />
+        <item
+            android:id="@id/nav_view"
             android:title="Explore" />
     </group>
 
-    <item android:title="Travelers Needs">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_money"
-                android:title="Currency Converter" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_map"
-                android:title="Maps" />
-        </menu>
-    </item>
+    <item android:title="Tags">
 
+    </item>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@id/nav_manage"
+            android:title="Settings" />
+    </group>
 </menu>
