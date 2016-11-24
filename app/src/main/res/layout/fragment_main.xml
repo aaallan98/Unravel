@@ -26,14 +26,17 @@
         app:backgroundTint="@android:color/holo_blue_light"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="197dp" />
+        android:layout_marginTop="197dp"
+        android:backgroundTint="@color/colorAccent"
+        android:tint="@null"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_new_trip"
         android:padding="8dp"
-        android:textColor="#fff"
+        android:textColor="#FFFF00"
+        android:background="@null"
 
         android:id="@+id/main_button"
         android:textSize="22sp"
