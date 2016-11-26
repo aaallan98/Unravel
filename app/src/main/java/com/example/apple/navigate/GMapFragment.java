@@ -15,6 +15,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import static android.R.attr.fragment;
 import static com.example.apple.navigate.R.id.map;
 
 
@@ -46,11 +47,10 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback{
 
 
 
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        LatLng marker = new LatLng(-33.867,151.206);
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker,13));
+        LatLng marker = new LatLng(0,0);
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker,0));
         googleMap.addMarker(new MarkerOptions().title("Hello").position(marker));
     }
 }
