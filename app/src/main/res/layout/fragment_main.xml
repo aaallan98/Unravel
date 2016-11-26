@@ -23,11 +23,10 @@
         app:fabSize="mini"
         app:srcCompat="@android:drawable/ic_input_add"
         android:id="@+id/floatingActionButton"
-        app:backgroundTint="@android:color/holo_blue_light"
+        app:backgroundTint="@color/colorAccent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="197dp"
-        android:backgroundTint="@color/colorAccent"
         android:tint="@null"/>
 
     <Button

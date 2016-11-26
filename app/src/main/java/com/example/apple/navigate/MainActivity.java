@@ -1,4 +1,5 @@
 package com.example.apple.navigate;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +14,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.maps.MapFragment;
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -99,7 +103,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_trip) {
             //Set the fragment initially
             Toast.makeText(this, "New Trip", Toast.LENGTH_SHORT).show();
 
@@ -110,23 +114,36 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_calendar) {
             //Set the fragment initially
             Toast.makeText(this, "Calendar", Toast.LENGTH_SHORT).show();
 
-            GalleryFragment fragment = new GalleryFragment();
+            CalendarFragment fragment = new CalendarFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_map) {
+          //  Toast.makeText(this, "Map", Toast.LENGTH_SHORT).show();
 
-        } else if (id == R.id.nav_view) {
+          //  GMapFragment fragment = new GMapFragment();
+          //  android.support.v4.app.FragmentTransaction fragmentTransaction =
+          //          getSupportFragmentManager().beginTransaction();
+          //  fragmentTransaction.replace(R.id.fragment_container, fragment);
+          //  fragmentTransaction.commit();
 
-        }
+            FragmentManager fm = getFragmentManager();
+            fm.beginTransaction().replace(R.id.fragment_container, new GMapFragment()).commit();
+
+
+        } //else if (id == R.id.nav_currency) {
+
+        //} else if (id == R.id.nav_explore)  {
+
+        //}
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
