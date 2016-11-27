@@ -153,9 +153,15 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_currency) {
 
         }
-        //else if (id == R.id.nav_explore)  {
+        else if (id == R.id.nav_explore)  {
+            Toast.makeText(this, "Explore", Toast.LENGTH_SHORT).show();
 
-        //}
+            ExploreFragment fragment = new ExploreFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
