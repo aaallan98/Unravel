@@ -151,6 +151,15 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_currency) {
+            //Set the fragment initially
+            Toast.makeText(this, "Currency", Toast.LENGTH_SHORT).show();
+
+            CurrencyFragment fragment = new CurrencyFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
+
 
         }
         else if (id == R.id.nav_explore)  {
