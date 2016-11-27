@@ -25,7 +25,6 @@ import static com.example.apple.navigate.R.id.map;
 
 public class GMapFragment extends Fragment implements OnMapReadyCallback{
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
