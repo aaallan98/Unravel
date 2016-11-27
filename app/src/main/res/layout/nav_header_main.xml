@@ -11,7 +11,7 @@
         android:id="@+id/profile_image"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/logomakr_3ywgrt"
+        android:src="@drawable/profilepic"
         app:border_color="#FF000000"
         android:layout_marginLeft="24dp"
         android:layout_centerVertical="true"
@@ -36,7 +36,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="user@host.com"
+        android:text="allan94@gmail.com"
         android:id="@+id/email"
         android:gravity="left"
         android:layout_marginBottom="8dp"
