@@ -19,19 +19,23 @@
             android:icon="@drawable/ic_assistant"
             android:title="Map" />
         <item
-            android:id="@id/nav_view"
+            android:id="@+id/nav_currency"
+            android:icon="@drawable/ic_money"
+
             android:title="Currency" />
         <item
-            android:id="@id/nav_view"
+            android:id="@+id/nav_explore"
+            android:icon="@drawable/ic_globe"
+
             android:title="Explore" />
-    </group>
 
-    <item android:title="Tags">
-
-    </item>
-    <group android:checkableBehavior="single">
         <item
-            android:id="@id/nav_view"
-            android:title="Settings" />
+            android:id="@+id/nav_tag"
+            android:icon="@drawable/ic_tag"
+            android:title="Tag" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
     </group>
 </menu>
