@@ -25,4 +25,5 @@
     </string>
     <!-- Googlemap -->
     <string name="google_maps_key"></string>
+
 </resources>
