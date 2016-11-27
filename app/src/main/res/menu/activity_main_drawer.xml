@@ -3,42 +3,35 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_trip"
             android:icon="@drawable/ic_border"
             android:title="New Trip" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_calendar"
             android:icon="@drawable/ic_event_note_black_24dp"
             android:title="Calendar" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Photos / Video" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_navigates"
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_assistant"
             android:title="Map" />
         <item
             android:id="@id/nav_view"
-            android:icon="@drawable/ic_money"
             android:title="Currency" />
         <item
             android:id="@id/nav_view"
-            android:icon="@drawable/ic_assistant"
-
             android:title="Explore" />
+    </group>
 
-    <item
+    <item android:title="Tags">
 
-        android:id="@+id/nav_view"
-        android:icon="@drawable/ic_tag"
-
-         android:title="Tags"/>
-
+    </item>
+    <group android:checkableBehavior="single">
         <item
-            android:id="@id/nav_manage"
-            android:icon="@drawable/ic_settings"
-
+            android:id="@id/nav_view"
             android:title="Settings" />
     </group>
 </menu>
