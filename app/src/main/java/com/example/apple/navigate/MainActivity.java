@@ -1,5 +1,6 @@
 package com.example.apple.navigate;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity
 
     NavigationView navigationView = null;
     Toolbar toolbar = null;
-
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,14 +106,24 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_trip) {
             //Set the fragment initially
-            Toast.makeText(this, "New Trip", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, "Diary", Toast.LENGTH_SHORT).show();
 
+            //intent = new Intent(this, Diary.class);
 
-            MainFragment fragment = new MainFragment();
+            Toast.makeText(this, "Diary", Toast.LENGTH_SHORT).show();
+
+            DiaryFragment fragment = new DiaryFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
+
+
+            //MainFragment fragment = new MainFragment();
+            //android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    //getSupportFragmentManager().beginTransaction();
+            //fragmentTransaction.replace(R.id.fragment_container, fragment);
+            //fragmentTransaction.commit();
             // Handle the camera action
         } else if (id == R.id.nav_calendar) {
             //Set the fragment initially
