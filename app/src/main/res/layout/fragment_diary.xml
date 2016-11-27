@@ -5,12 +5,11 @@
     android:id="@+id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="#FFF"
     tools:context="com.example.apple.navigate.DiaryFragment"
-    android:paddingTop="55dp"
+    android:paddingTop="70dp"
     android:paddingLeft="15dp"
     android:paddingRight="15dp">
-    android:background = "#FFFFFF"
 
     <EditText
         android:layout_width="match_parent"
@@ -33,36 +32,13 @@
         android:layout_width="250dp" />
 
     <EditText
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/Hashtags"
-        android:hint="Hashtags"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Note"
-        android:layout_alignParentStart="true" />
-
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/Location"
         android:hint="Location"
-        android:layout_below="@+id/Date"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/Note"
-        android:hint="Note"
-        android:singleLine="false"
-        android:cursorVisible="true"
-        android:textAlignment="viewStart"
-        android:layout_below="@+id/Location"
+        android:layout_below="@+id/DateButton"
         android:layout_alignParentStart="true" />
 
     <android.support.design.widget.FloatingActionButton
@@ -72,22 +48,41 @@
         app:fabSize="mini"
         app:srcCompat="@android:drawable/ic_menu_today"
         android:id="@+id/DateButton"
-        android:layout_above="@+id/Location"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="12dp"
-        android:onClick="showDatePickerDialog"/>
+        android:layout_below="@+id/Title"
+        android:layout_alignParentEnd="true" />
 
+    <EditText
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/Hashtags"
+        android:hint="Hashtags"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Note"
+        android:layout_alignParentStart="true" />
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:onClick="onclickDialog"
         app:fabSize="mini"
         app:srcCompat="@android:drawable/ic_input_add"
         android:id="@+id/AddButton"
         app:rippleColor="@android:color/holo_red_light"
         android:layout_alignBottom="@+id/Hashtags"
-        android:layout_alignStart="@+id/DateButton" />
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/Note"
+        android:hint="Note"
+        android:layout_height="250dp"
+        android:singleLine="false"
+        android:layout_below="@+id/Location"
+        android:layout_alignParentStart="true"
+        android:cursorVisible="true"
+        android:textAlignment="viewStart" />
 
 </RelativeLayout>

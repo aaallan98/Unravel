@@ -148,23 +148,39 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_map) {
-          //  Toast.makeText(this, "Map", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Map", Toast.LENGTH_SHORT).show();
 
-          //  GMapFragment fragment = new GMapFragment();
-          //  android.support.v4.app.FragmentTransaction fragmentTransaction =
-          //          getSupportFragmentManager().beginTransaction();
-          //  fragmentTransaction.replace(R.id.fragment_container, fragment);
-          //  fragmentTransaction.commit();
+           // GMapFragment fragment = new GMapFragment();
+            //android.support.v4.app.FragmentTransaction fragmentTransaction =
+              //      getSupportFragmentManager().beginTransaction();
+            //fragmentTransaction.replace(R.id.fragment_container, fragment);
+            //fragmentTransaction.commit();
 
             FragmentManager fm = getFragmentManager();
             fm.beginTransaction().replace(R.id.fragment_container, new GMapFragment()).commit();
 
 
-        } //else if (id == R.id.nav_currency) {
+        } else if (id == R.id.nav_currency) {
+            //Set the fragment initially
+            Toast.makeText(this, "Currency", Toast.LENGTH_SHORT).show();
 
-        //} else if (id == R.id.nav_explore)  {
+            CurrencyFragment fragment = new CurrencyFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
 
-        //}
+
+        }
+        else if (id == R.id.nav_explore)  {
+            Toast.makeText(this, "Explore", Toast.LENGTH_SHORT).show();
+
+            ExploreFragment fragment = new ExploreFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
