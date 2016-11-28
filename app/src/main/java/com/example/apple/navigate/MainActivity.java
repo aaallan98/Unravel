@@ -116,7 +116,6 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_trip) {
             //Set the fragment initially
-           // Toast.makeText(this, "Diary", Toast.LENGTH_SHORT).show();
 
             //intent = new Intent(this, Diary.class);
 
@@ -172,6 +171,16 @@ public class MainActivity extends AppCompatActivity
 
 
         }
+        else if (id == R.id.nav_settings)  {
+            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+
+            SettingsFragment fragment = new SettingsFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
+        }
+
         else if (id == R.id.nav_explore)  {
             Toast.makeText(this, "Explore", Toast.LENGTH_SHORT).show();
 
@@ -181,6 +190,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
