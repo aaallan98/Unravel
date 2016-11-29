@@ -9,8 +9,9 @@
     tools:context="com.example.apple.navigate.DiaryFragment"
     android:paddingTop="55dp"
     android:paddingLeft="15dp"
-    android:paddingRight="15dp">
-    android:background = "#FFFFFF"
+    android:paddingRight="15dp"
+    android:background = "#FFFFFF">
+
 
     <EditText
         android:layout_width="match_parent"
