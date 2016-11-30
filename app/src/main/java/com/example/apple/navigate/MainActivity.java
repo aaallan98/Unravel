@@ -149,14 +149,14 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_map) {
             Toast.makeText(this, "Map", Toast.LENGTH_SHORT).show();
 
-           // GMapFragment fragment = new GMapFragment();
-            //android.support.v4.app.FragmentTransaction fragmentTransaction =
-              //      getSupportFragmentManager().beginTransaction();
-            //fragmentTransaction.replace(R.id.fragment_container, fragment);
-            //fragmentTransaction.commit();
+            GMapFragment fragment = new GMapFragment();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
 
-            FragmentManager fm = getFragmentManager();
-            fm.beginTransaction().replace(R.id.fragment_container, new GMapFragment()).commit();
+
+
 
 
         } else if (id == R.id.nav_currency) {
