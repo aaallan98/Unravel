@@ -1,4 +1,21 @@
 <resources>
+
+
+
+    <string name="Unravel">UNRAVEL</string>
+    <string name="introScreenOne">Remember all your favorite trips whenever, and wherever you go.</string>
+    <string name="skip"><![CDATA[Skip>]]></string>
+    <string name="title_activity_second_layout">SecondLayout</string>
+    <string name="Diary">Diary</string>
+    <string name="introScreenTwo">Record your favorite experiences with photos and videos while staying offline.</string>
+    <string name="SHARE">SHARE</string>
+    <string name="letsunravel">Let\'s Unravel!!</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip1">SKIP</string>
+    <string name="start">GOT IT</string>
     <string name="app_name">UNRAVEL</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -19,7 +36,6 @@
     <string name="team">Developed by Team Unravel</string>
 
 
-
     <string name="add_new_trip">Add New Trip</string>
     <string name="title_activity_login">Sign in</string>
 
@@ -37,5 +53,6 @@
     </string>
     <!-- Googlemap -->
     <string name="google_maps_key"></string>
+    <string name="title_activity_main2">UNRAVEL</string>
 
 </resources>
