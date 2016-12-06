@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -96,9 +97,21 @@ public class MainActivity2 extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.nav_settings) {
+            Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+
+
+            Log.d("MAuth","Logout Clicked");
+            try {
+                Intent intents = new Intent(this, LogoutActivity.class);
+                startActivity(intents);
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
         }
+
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -129,12 +142,6 @@ public class MainActivity2 extends AppCompatActivity
             fragmentTransaction.commit();
 
 
-            //MainFragment fragment = new MainFragment();
-            //android.support.v4.app.FragmentTransaction fragmentTransaction =
-            //getSupportFragmentManager().beginTransaction();
-            //fragmentTransaction.replace(R.id.fragment_container, fragment);
-            //fragmentTransaction.commit();
-            // Handle the camera action
         } else if (id == R.id.nav_calendar) {
             //Set the fragment initially
             Toast.makeText(this, "Calendar", Toast.LENGTH_SHORT).show();
@@ -178,12 +185,26 @@ public class MainActivity2 extends AppCompatActivity
         else if (id == R.id.nav_settings)  {
             Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
 
-            SettingsFragment fragment = new SettingsFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, fragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+            if (id == R.id.nav_settings) {
+                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+
+                //SettingsFragment fragment = new SettingsFragment();
+                //         android.support.v4.app.FragmentTransaction fragmentTransaction =
+                //                getSupportFragmentManager().beginTransaction();
+                //      fragmentTransaction.replace(R.id.fragment_container, fragment);
+                //    fragmentTransaction.commit();
+                Log.d("MAuth","Logout Clicked");
+                try {
+                    Intent intents = new Intent(this, LogoutActivity.class);
+                    startActivity(intents);
+                    //setContentView(R.layout.activity_logout);
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+
+
         }
 
         else if (id == R.id.nav_explore)  {
