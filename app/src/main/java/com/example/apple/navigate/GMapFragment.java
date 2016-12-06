@@ -78,6 +78,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback {
                 e.printStackTrace();
             }
             Address address = addressList.get(0);
+            mMap.clear();
             LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
             mMap.addMarker(new MarkerOptions().position(latLng).title("Marker"));           //add marker on it
             mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
