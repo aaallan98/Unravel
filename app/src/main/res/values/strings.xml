@@ -21,6 +21,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="logout">Log Out</string>
+
     <string name="koreanwon">Korean Won</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -30,6 +32,7 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="contact_us">Contact Us:</string>
     <string name="emails">Unravel@gmail.com</string>
+
 
     <string name="version">Unravel 1.0.</string>
     <string name="team">Developed by Team Unravel</string>

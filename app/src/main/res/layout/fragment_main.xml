@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/onthe"
+        app:srcCompat="@drawable/newback"
         android:scaleType="centerCrop"
         android:id="@+id/imageView"
         android:adjustViewBounds="true"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:text="@string/add_new_trip"
         android:padding="8dp"
-        android:textColor="#FFFF00"
+        android:textColor="#4DA6FF"
         android:background="@null"
 
         android:id="@+id/main_button"

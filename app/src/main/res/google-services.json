@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1058337401354",
+    "firebase_url": "https://unravel-app-2c0b8.firebaseio.com",
+    "project_id": "unravel-app-2c0b8",
+    "storage_bucket": "unravel-app-2c0b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058337401354:android:bbd3a03c9f43bd7c",
+        "android_client_info": {
+          "package_name": "com.example.apple.navigate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058337401354-6e55i94iu8mgh1gskvbr58ku8sd4c7ft.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.apple.navigate",
+            "certificate_hash": "5C3E0609C082800FCEBDFCAFB8F404E175F541EA"
+          }
+        },
+        {
+          "client_id": "1058337401354-hnim47k5c423tsi7d9qsbq97feh54l3m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPilmM_0uVOBzv7KdgnW2tMswPW2bqSYk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058337401354-hnim47k5c423tsi7d9qsbq97feh54l3m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
