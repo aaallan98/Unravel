@@ -1,0 +1,95 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.apple.navigate.CountryFragment"
+    android:padding="10dp"
+    android:layout_marginTop="50dp"
+    android:background="#FFF">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        app:srcCompat="@drawable/korea"
+        android:id="@+id/imageKorea"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:padding="5dp"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:layout_width="234dp"
+        android:layout_height="99dp"
+        android:inputType="textPersonName"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:text="KOREA"
+        android:ems="10"
+        android:id="@+id/textKorea"
+        android:textAlignment="textStart"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAllCaps="false"
+        android:paddingTop="33dp"
+        android:paddingLeft="10dp"
+        android:onClick="onClick"/>
+
+
+    <ImageView
+        app:srcCompat="@drawable/usa"
+        android:id="@+id/imageUsa"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:padding="5dp"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:layout_width="234dp"
+        android:layout_height="99dp"
+        android:inputType="textPersonName"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:text="USA"
+        android:ems="10"
+        android:id="@+id/textUsa"
+        android:textAlignment="textStart"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAllCaps="false"
+        android:paddingTop="33dp"
+        android:paddingLeft="10dp"
+        android:onClick="onClick"/>
+
+    <ImageView
+        app:srcCompat="@drawable/china"
+        android:id="@+id/imageChina"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:padding="5dp"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:layout_width="234dp"
+        android:layout_height="99dp"
+        android:inputType="textPersonName"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:text="CHINA"
+        android:ems="10"
+        android:id="@+id/textChina"
+        android:textAlignment="textStart"
+        android:textSize="28sp"
+        android:textStyle="normal|bold"
+        android:textAllCaps="false"
+        android:paddingTop="33dp"
+        android:paddingLeft="10dp"
+        android:onClick="onClick"/>
+
+</GridLayout>
