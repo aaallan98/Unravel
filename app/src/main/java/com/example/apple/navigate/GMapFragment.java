@@ -1,6 +1,5 @@
 package com.example.apple.navigate;
 
-import android.*;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Address;
@@ -33,34 +32,26 @@ import java.util.List;
 
 public class GMapFragment extends Fragment implements OnMapReadyCallback {
 
-
     public GMapFragment() {
         // Required empty public constructor
     }
 
-
-    private EditText location_tf;
-    private Button searchbutton;
+    private EditText location_tf;           //textbox for input place
+    private Button searchbutton;            //search button
     private GoogleMap mMap;
     private GoogleApiClient client;
 
-
-
     @Override
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         View v = inflater.inflate(R.layout.fragment_gmap, container,
                 false);
-
         client = new GoogleApiClient.Builder(getActivity()).addApi(AppIndex.API).build();
-
         location_tf = (EditText) v.findViewById(R.id.TFaddress);
         searchbutton = (Button) v.findViewById(R.id.Bsearch);
         searchbutton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+            public void onClick(View v) {                           //if click search button go to onSearch function
                 // Perform action on click
-                onSearch();
+                onSearch();                                         //search map
             }
         });
 
@@ -70,17 +61,14 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback {
             e.printStackTrace();
         }
 
-
         setUpMapIfNeeded();
-
 
         return v;
     }
 
 
     private void onSearch() {
-
-        String location = location_tf.getText().toString();
+        String location = location_tf.getText().toString();                                 //getting string from textbox
         List<Address> addressList = null;
         if (location != null || !location.equals("")) {
             Geocoder geocoder = new Geocoder(getActivity());
@@ -89,13 +77,10 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
             Address address = addressList.get(0);
             LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
-            mMap.addMarker(new MarkerOptions().position(latLng).title("Marker"));
+            mMap.addMarker(new MarkerOptions().position(latLng).title("Marker"));           //add marker on it
             mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-
-
         }
     }
 
@@ -103,7 +88,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback {
     public void onResume() {
         super.onResume();
         setUpMapIfNeeded();
-
     }
 
     private void setUpMapIfNeeded() {
@@ -114,7 +98,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
             if (mMap != null) {
                 setUpMap();
             }
@@ -122,9 +105,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback {
     }
 
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
         if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
             return;
         }
         mMap.setMyLocationEnabled(true);
@@ -132,8 +113,7 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback {
 
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
-                .setName("Maps Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
+                .setName("Maps Page")
                 .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
                 .build();
         return new Action.Builder(Action.TYPE_VIEW)
@@ -145,7 +125,6 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onStart() {
         super.onStart();
-
         client.connect();
         AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
@@ -153,11 +132,9 @@ public class GMapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onStop() {
         super.onStop();
-
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
     }
-
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
