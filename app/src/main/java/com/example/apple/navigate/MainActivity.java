@@ -2,13 +2,13 @@ package com.example.apple.navigate;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int current = getItem(+1);
+               int current = getItem(+1);
                 if(current<layouts.length)
                 {
                     viewPager.setCurrentItem(current);
@@ -124,35 +124,35 @@ public class MainActivity extends AppCompatActivity {
     {
         return viewPager.getCurrentItem() + i;
     }
-    ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener()
-    {
+  ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener()
+  {
 
-        @Override
-        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+      @Override
+      public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-        }
+      }
 
-        @Override
-        public void onPageSelected(int position) {
+      @Override
+      public void onPageSelected(int position) {
 
-            addBottomDots(position);
-            if(position==layouts.length-1)
-            {
-                next.setText("PROCEED");
-                skip.setVisibility(View.GONE);
-            }
-            else
-            {
-                next.setText("NEXT");
-                skip.setVisibility(View.VISIBLE);
-            }
-        }
+          addBottomDots(position);
+          if(position==layouts.length-1)
+          {
+              next.setText("PROCEED");
+              skip.setVisibility(View.GONE);
+          }
+          else
+          {
+              next.setText("NEXT");
+              skip.setVisibility(View.VISIBLE);
+          }
+      }
 
-        @Override
-        public void onPageScrollStateChanged(int state) {
+      @Override
+      public void onPageScrollStateChanged(int state) {
 
-        }
-    };
+      }
+  };
 
     private void changeStatusBarColor()
     {
@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
-            View v =(View)object;
+           View v =(View)object;
             container.removeView(v);
         }
     }
