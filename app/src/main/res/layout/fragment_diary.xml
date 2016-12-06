@@ -91,4 +91,12 @@
         android:layout_alignBottom="@+id/Hashtags"
         android:layout_alignStart="@+id/DateButton" />
 
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/Save" />
+
 </RelativeLayout>
