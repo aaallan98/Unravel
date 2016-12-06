@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,7 @@ private Intromanager intromanager;
     private int[] layouts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         intromanager = new Intromanager(this);
         if(!intromanager.Check())

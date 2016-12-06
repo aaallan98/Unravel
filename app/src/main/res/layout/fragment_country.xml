@@ -35,7 +35,7 @@
         android:textAllCaps="false"
         android:paddingTop="33dp"
         android:paddingLeft="10dp"
-        android:onClick="onClick"/>
+        />
 
 
     <ImageView
@@ -63,7 +63,7 @@
         android:textAllCaps="false"
         android:paddingTop="33dp"
         android:paddingLeft="10dp"
-        android:onClick="onClick"/>
+        />
 
     <ImageView
         app:srcCompat="@drawable/china"
@@ -90,6 +90,6 @@
         android:textAllCaps="false"
         android:paddingTop="33dp"
         android:paddingLeft="10dp"
-        android:onClick="onClick"/>
+        />
 
 </GridLayout>

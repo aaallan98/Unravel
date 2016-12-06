@@ -45,7 +45,7 @@ public class CountryFragment extends Fragment implements View.OnClickListener{
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
-        else if(v.getId() == R.id.imageUsa) {
+        else if (v.getId() == R.id.imageUsa) {
 
             ExploreUsaFragment fragment2 = new ExploreUsaFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
