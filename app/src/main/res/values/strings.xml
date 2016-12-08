@@ -10,7 +10,7 @@
     <string name="SHARE">SHARE</string>
     <string name="letsunravel">Let\'s Unravel!!</string>
     <string name="hello_world">Hello world!</string>
-
+    <string name="input" />
     <string name="title_activity_welcome">Home Screen</string>
     <string name="next">NEXT</string>
     <string name="skip1">SKIP</string>
@@ -56,5 +56,8 @@
     <!-- Googlemap -->
     <string name="google_maps_key"></string>
     <string name="title_activity_main2">UNRAVEL</string>
+    <string name="title_activity_main_currency">MainActivityCurrency</string>
+    <string name="title_activity_calculate">CalculateActivity</string>
+    <string name="title_activity_convert_into">ConvertInto</string>
 
 </resources>

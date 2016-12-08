@@ -172,15 +172,13 @@ public class MainActivity2 extends AppCompatActivity
         } else if (id == R.id.nav_currency) {
             //Set the fragment initially
             Toast.makeText(this, "Currency", Toast.LENGTH_SHORT).show();
-
-            CurrencyFragment fragment = new CurrencyFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction =
-                    getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, fragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
-
-
+            try {
+                Intent intents = new Intent(this, MainActivityCurrency.class);
+                startActivity(intents);
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
         }
         else if (id == R.id.nav_settings)  {
             Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
